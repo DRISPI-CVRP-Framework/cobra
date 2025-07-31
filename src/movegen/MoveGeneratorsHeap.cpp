@@ -69,14 +69,18 @@ namespace cobra {
         assert(!is_empty());
 
         const auto move_index = heap[0];
+        moves[move_index].set_heap_index(unheaped);
+
+        if (heap_len == 1) {
+            --heap_len;
+            return move_index;
+        }
 
         heap[0] = heap[heap_len - 1];
         moves[heap[0]].set_heap_index(0);
         heap_len--;
 
         heapify(0);
-
-        moves[move_index].set_heap_index(unheaped);
 
         assert(is_heap());
 
