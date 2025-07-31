@@ -3018,14 +3018,18 @@ namespace cobra {
             assert(heap_len > 0);
 
             const auto move_index = heap_array[0];
+            relocation_nodes[move_index].heap_index = -1;
+
+            if (heap_len == 1) {
+                --heap_len;
+                return move_index;
+            }
 
             heap_array[0] = heap_array[heap_len - 1];
             relocation_nodes[heap_array[0]].heap_index = 0;
             heap_len--;
 
             heap_heapify(0);
-
-            relocation_nodes[move_index].heap_index = -1;
 
             assert(is_heap());
 
