@@ -1,2 +1,0 @@
-/usr/bin/ar qc libcobra-1.0.0.a CMakeFiles/cobra.dir/solution/Solution.cpp.o CMakeFiles/cobra.dir/solution/SolutionConstruction.cpp.o CMakeFiles/cobra.dir/movegen/MoveGenerators.cpp.o CMakeFiles/cobra.dir/movegen/AbstractMoveGeneratorsView.cpp.o CMakeFiles/cobra.dir/movegen/MoveGeneratorsHeap.cpp.o CMakeFiles/cobra.dir/solution/SolutionUtilities.cpp.o
-/usr/bin/ranlib libcobra-1.0.0.a
